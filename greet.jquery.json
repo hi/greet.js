@@ -1,0 +1,28 @@
+{
+  "name": "greet",
+  "title": "greet.js",
+  "description": "Generate time-based greeting messages",
+  "version": "1.0",
+  "homepage": "github.com/hi/greet.js",
+  "author": {
+    "name": "Hello Innovation",
+    "url": "https://github.com/hi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/hi/greet.js"
+  },
+  "bugs": "",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "keywords": [
+    "jquery-plugin"
+  ]
+}
