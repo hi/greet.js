@@ -28,4 +28,4 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Release History
-_(Nothing yet)_
+_(Nothing yet, but almost there)_
