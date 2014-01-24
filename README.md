@@ -1,5 +1,7 @@
 # greet.js
 
+[![Build Status](https://travis-ci.org/hi/greet.js.png?branch=master)](https://travis-ci.org/hi/greet.js)
+
 Generate time-based greeting messages
 
 ## Getting Started
