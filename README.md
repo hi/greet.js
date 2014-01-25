@@ -7,7 +7,7 @@ Generate time-based greeting messages
 ## Demo
 Checkout our awesome [demo][demo].
 
-[demo]: https://hi.github.com/greet.js/index.html
+[demo]: http://htmlpreview.github.io/?https://github.com/hi/greet.js/blob/master/index.html
 
 ## Getting Started
 
