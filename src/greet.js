@@ -10,38 +10,47 @@
 
   "use strict";
 
-  // Default options.
+  /**
+   * Default options
+   * @type {Object}
+   */
   var defaultOptions = {
+    time: "now",
     messages: {
-      "12am": [ "It's bed time, {name}" ],
-      "5am": [ "Good morning, {name}" ],
-      "12pm": [ "Good afternoon, {name}" ],
-      "6pm": [ "Good evening, {name}" ],
-      "9pm": [ "Good night, {name}", "Have a great night, {name}" ]
+      "12 AM": [
+        "It's bed time, {name}"
+      ],
+      "05 AM": [
+        "Good morning, {name}"
+      ],
+      "12 PM": [
+        "Good afternoon, {name}"
+      ],
+      "06 PM": [
+        "Good evening, {name}"
+      ],
+      "09 PM": [
+        "Good night, {name}",
+        "Have a great night, {name}"
+      ]
     }
   };
 
-  // Generate the messaged based on proper time
+  /**
+   * Generate the messaged based on proper time
+   * @param  {String} name     The person name to greet
+   * @param  {Object} options
+   * @return {String}          The greeting message
+   */
   var greet = function(name, options) {
+
     var messageList,
-        now = new Date(),
-        re = /^([0-9]|0[0-9]|1[0-9]|2[0-3]):?([0-5][0-9])?(pm|am)?$/i;
+        basetime = options.time !== "now" ? parseTimeString(options.time) : new Date();
 
     // Find the proper time
     $.each(options.messages, function(time, messages) {
-        var bits = re.exec(time),
-            h = parseInt(bits[1], 10) || 0,
-            m = parseInt(bits[2]) || 0,
-            pm = bits[3] === "pm",
-            am = bits[3] === "am",
-            d = new Date();
 
-      // Generate the datetime of this message
-      d.setHours(am && h === 12 ? 0 : (pm && h < 12 ? h + 12 : h));
-      d.setMinutes(m);
-      d.setSeconds(0);
-
-      if (now >= d) {
+      if (basetime >= parseTimeString(time)) {
         messageList = messages;
       }
 
@@ -57,17 +66,46 @@
     return message;
   };
 
-  // Collection method.
+  /**
+   * Parse the time string format to datetime
+   * @param  {String} time  The time Ex: 2:30PM, 15AM, 9:35
+   * @return {Datetime}     The parsed time with the date of today
+   */
+  var parseTimeString = function(time) {
+
+    var re = /^([0-9]|0[0-9]|1[0-9]|2[0-3]):?([0-5][0-9])? ?(pm|am)?$/i,
+        bits = re.exec(time),
+        h = parseInt(bits[1], 10) || 0,
+        m = parseInt(bits[2]) || 0,
+        pm = bits[3].toLowerCase() === "pm",
+        am = bits[3].toLowerCase() === "am",
+        d = new Date();
+
+    // Generate the datetime of this message
+    d.setHours(am && h === 12 ? 0 : (pm && h < 12 ? h + 12 : h));
+    d.setMinutes(m);
+    d.setSeconds(0);
+
+    return d;
+  };
+
+  /**
+   * greet jQuery plugin - public method
+   * @param  {Object} options   Passed options extending defaultOptions
+   * @return {Selector}         The array of elements
+   */
   $.fn.greet = function (options) {
+
     // Override default options with passed-in options.
     options = $.extend({}, defaultOptions, options);
 
     return this.each(function () {
 
-      var name = $(this).text(),
+      // preventing against multiple instantiations
+      var name = $(this).data('name') || $(this).text(),
           message = greet(name, options);
 
-      $(this).html(message);
+      $(this).data('name', name).html(message);
 
     });
   };

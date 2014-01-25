@@ -1,0 +1,257 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'jsdox' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose cache add [ 'jsdox', null ]
+6 verbose cache add name=undefined spec="jsdox" args=["jsdox",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'jsdox',
+7 verbose parsed url   path: 'jsdox',
+7 verbose parsed url   href: 'jsdox' }
+8 silly lockFile fc3e298a-jsdox jsdox
+9 verbose lock jsdox C:\Users\Guilherme\AppData\Roaming\npm-cache\fc3e298a-jsdox.lock
+10 silly lockFile fc3e298a-jsdox jsdox
+11 silly lockFile fc3e298a-jsdox jsdox
+12 verbose addNamed [ 'jsdox', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 948d0fc1-jsdox jsdox@
+15 verbose lock jsdox@ C:\Users\Guilherme\AppData\Roaming\npm-cache\948d0fc1-jsdox.lock
+16 silly addNameRange { name: 'jsdox', range: '*', hasData: false }
+17 verbose url raw jsdox
+18 verbose url resolving [ 'https://registry.npmjs.org/', './jsdox' ]
+19 verbose url resolved https://registry.npmjs.org/jsdox
+20 info trying registry request attempt 1 at 19:17:50
+21 verbose etag "994BCW5B5WZQBH3BA7TAU5AHP"
+22 http GET https://registry.npmjs.org/jsdox
+23 http 304 https://registry.npmjs.org/jsdox
+24 silly registry.get cb [ 304,
+24 silly registry.get   { date: 'Sat, 25 Jan 2014 21:17:52 GMT',
+24 silly registry.get     server: 'Apache',
+24 silly registry.get     connection: 'Keep-Alive',
+24 silly registry.get     'keep-alive': 'timeout=10, max=50',
+24 silly registry.get     etag: '"994BCW5B5WZQBH3BA7TAU5AHP"',
+24 silly registry.get     vary: 'Accept' } ]
+25 verbose etag jsdox from cache
+26 silly addNameRange number 2 { name: 'jsdox', range: '*', hasData: true }
+27 silly addNameRange versions [ 'jsdox', [ '0.1.0', '0.2.0', '0.2.1', '0.2.2' ] ]
+28 verbose addNamed [ 'jsdox', '0.2.2' ]
+29 verbose addNamed [ '0.2.2', '0.2.2' ]
+30 silly lockFile c9dd2c8b-jsdox-0-2-2 jsdox@0.2.2
+31 verbose lock jsdox@0.2.2 C:\Users\Guilherme\AppData\Roaming\npm-cache\c9dd2c8b-jsdox-0-2-2.lock
+32 silly lockFile c9dd2c8b-jsdox-0-2-2 jsdox@0.2.2
+33 silly lockFile c9dd2c8b-jsdox-0-2-2 jsdox@0.2.2
+34 silly lockFile 948d0fc1-jsdox jsdox@
+35 silly lockFile 948d0fc1-jsdox jsdox@
+36 silly resolved [ { author: { name: 'Pascal Belloncle', url: 'http://jsdox.org' },
+36 silly resolved     maintainers: [ [Object] ],
+36 silly resolved     licenses: [ [Object] ],
+36 silly resolved     name: 'jsdox',
+36 silly resolved     description: 'Simple JSDoc 3 to Markdown generator',
+36 silly resolved     version: '0.2.2',
+36 silly resolved     repository: { type: 'git', url: 'git://github.com/sutoiku/jsdox.git' },
+36 silly resolved     main: './jsdox.js',
+36 silly resolved     files: [ 'bin/jsdox', 'jsdox.js', 'LICENSE', 'README.md' ],
+36 silly resolved     preferGlobal: true,
+36 silly resolved     bin: { jsdox: './bin/jsdox' },
+36 silly resolved     dependencies:
+36 silly resolved      { optimist: '~0.3.4',
+36 silly resolved        'uglify-js': 'git+https://github.com/psq/UglifyJS.git#master' },
+36 silly resolved     devDependencies: { mocha: '1.0.x', should: '0.6.x' },
+36 silly resolved     optionalDependencies: {},
+36 silly resolved     engines: { node: '>=0.8.4' },
+36 silly resolved     homepage: 'http://jsdox.org',
+36 silly resolved     bugs: { url: 'https://github.com/sutoiku/jsdox/issues' },
+36 silly resolved     readme: '# jsdox.js\n\njsdox is a simple jsdoc 3 generator.  It pulls documentation tags based on a subset of [jsdoc 3](http://usejsdoc.org/) from your javascript files and generates [markdown](http://daringfireball.net/projects/markdown/) files.\n\nRelies on (for now) patched version of the UglifyJS parser to get the full AST including comments\n\n# Resources\n* [jsdox](http://jsdox.org) Documentation \n* Github [repo](https://github.com/sutoiku/jsdox)\n* Issue [tracker](https://github.com/sutoiku/jsdox/issues)\n* Contribute by creating [pull requests](https://github.com/sutoiku/jsdox/pulls)!\n\n# Author and Maintainers\n* Pascal Belloncle (Original author)\n* Marc Trudel\n\n# License\n\njsdox.js is freely distributable under the terms of the MIT license.\n\nCopyright (c) 2012-2013 Sutoiku\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation\nfiles (the "Software"), to deal in the Software without restriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+36 silly resolved     readmeFilename: 'README.md',
+36 silly resolved     _id: 'jsdox@0.2.2',
+36 silly resolved     _from: 'jsdox@' } ]
+37 info install jsdox@0.2.2 into C:\Users\Guilherme\AppData\Roaming\npm
+38 info installOne jsdox@0.2.2
+39 info C:\Users\Guilherme\AppData\Roaming\npm\node_modules\jsdox unbuild
+40 verbose tar unpack C:\Users\Guilherme\AppData\Roaming\npm-cache\jsdox\0.2.2\package.tgz
+41 silly lockFile ffdf81bd-a-Roaming-npm-node-modules-jsdox tar://C:\Users\Guilherme\AppData\Roaming\npm\node_modules\jsdox
+42 verbose lock tar://C:\Users\Guilherme\AppData\Roaming\npm\node_modules\jsdox C:\Users\Guilherme\AppData\Roaming\npm-cache\ffdf81bd-a-Roaming-npm-node-modules-jsdox.lock
+43 silly lockFile 34242908-pm-cache-jsdox-0-2-2-package-tgz tar://C:\Users\Guilherme\AppData\Roaming\npm-cache\jsdox\0.2.2\package.tgz
+44 verbose lock tar://C:\Users\Guilherme\AppData\Roaming\npm-cache\jsdox\0.2.2\package.tgz C:\Users\Guilherme\AppData\Roaming\npm-cache\34242908-pm-cache-jsdox-0-2-2-package-tgz.lock
+45 silly gunzTarPerm modes [ '755', '644' ]
+46 silly gunzTarPerm extractEntry package.json
+47 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+48 silly gunzTarPerm extractEntry README.md
+49 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+50 silly gunzTarPerm extractEntry LICENSE
+51 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+52 silly gunzTarPerm extractEntry jsdox.js
+53 silly gunzTarPerm modified mode [ 'jsdox.js', 438, 420 ]
+54 silly gunzTarPerm extractEntry bin/jsdox
+55 silly gunzTarPerm modified mode [ 'bin/jsdox', 438, 420 ]
+56 silly lockFile ffdf81bd-a-Roaming-npm-node-modules-jsdox tar://C:\Users\Guilherme\AppData\Roaming\npm\node_modules\jsdox
+57 silly lockFile ffdf81bd-a-Roaming-npm-node-modules-jsdox tar://C:\Users\Guilherme\AppData\Roaming\npm\node_modules\jsdox
+58 silly lockFile 34242908-pm-cache-jsdox-0-2-2-package-tgz tar://C:\Users\Guilherme\AppData\Roaming\npm-cache\jsdox\0.2.2\package.tgz
+59 silly lockFile 34242908-pm-cache-jsdox-0-2-2-package-tgz tar://C:\Users\Guilherme\AppData\Roaming\npm-cache\jsdox\0.2.2\package.tgz
+60 info preinstall jsdox@0.2.2
+61 verbose readDependencies using package.json deps
+62 verbose readDependencies using package.json deps
+63 verbose cache add [ 'optimist@~0.3.4', null ]
+64 verbose cache add name=undefined spec="optimist@~0.3.4" args=["optimist@~0.3.4",null]
+65 verbose parsed url { protocol: null,
+65 verbose parsed url   slashes: null,
+65 verbose parsed url   auth: null,
+65 verbose parsed url   host: null,
+65 verbose parsed url   port: null,
+65 verbose parsed url   hostname: null,
+65 verbose parsed url   hash: null,
+65 verbose parsed url   search: null,
+65 verbose parsed url   query: null,
+65 verbose parsed url   pathname: 'optimist@~0.3.4',
+65 verbose parsed url   path: 'optimist@~0.3.4',
+65 verbose parsed url   href: 'optimist@~0.3.4' }
+66 verbose cache add name="optimist" spec="~0.3.4" args=["optimist","~0.3.4"]
+67 verbose parsed url { protocol: null,
+67 verbose parsed url   slashes: null,
+67 verbose parsed url   auth: null,
+67 verbose parsed url   host: null,
+67 verbose parsed url   port: null,
+67 verbose parsed url   hostname: null,
+67 verbose parsed url   hash: null,
+67 verbose parsed url   search: null,
+67 verbose parsed url   query: null,
+67 verbose parsed url   pathname: '~0.3.4',
+67 verbose parsed url   path: '~0.3.4',
+67 verbose parsed url   href: '~0.3.4' }
+68 verbose addNamed [ 'optimist', '~0.3.4' ]
+69 verbose addNamed [ null, '>=0.3.4-0 <0.4.0-0' ]
+70 silly lockFile 094c60bd-optimist-0-3-4 optimist@~0.3.4
+71 verbose lock optimist@~0.3.4 C:\Users\Guilherme\AppData\Roaming\npm-cache\094c60bd-optimist-0-3-4.lock
+72 verbose cache add [ 'uglify-js@git+https://github.com/psq/UglifyJS.git#master',
+72 verbose cache add   null ]
+73 verbose cache add name=undefined spec="uglify-js@git+https://github.com/psq/UglifyJS.git#master" args=["uglify-js@git+https://github.com/psq/UglifyJS.git#master",null]
+74 verbose parsed url { protocol: null,
+74 verbose parsed url   slashes: null,
+74 verbose parsed url   auth: null,
+74 verbose parsed url   host: null,
+74 verbose parsed url   port: null,
+74 verbose parsed url   hostname: null,
+74 verbose parsed url   hash: '#master',
+74 verbose parsed url   search: null,
+74 verbose parsed url   query: null,
+74 verbose parsed url   pathname: 'uglify-js@git+https://github.com/psq/UglifyJS.git',
+74 verbose parsed url   path: 'uglify-js@git+https://github.com/psq/UglifyJS.git',
+74 verbose parsed url   href: 'uglify-js@git+https://github.com/psq/UglifyJS.git#master' }
+75 verbose cache add name="uglify-js" spec="git+https://github.com/psq/UglifyJS.git#master" args=["uglify-js","git+https://github.com/psq/UglifyJS.git#master"]
+76 verbose parsed url { protocol: 'git+https:',
+76 verbose parsed url   slashes: true,
+76 verbose parsed url   auth: null,
+76 verbose parsed url   host: 'github.com',
+76 verbose parsed url   port: null,
+76 verbose parsed url   hostname: 'github.com',
+76 verbose parsed url   hash: '#master',
+76 verbose parsed url   search: null,
+76 verbose parsed url   query: null,
+76 verbose parsed url   pathname: '/psq/UglifyJS.git',
+76 verbose parsed url   path: '/psq/UglifyJS.git',
+76 verbose parsed url   href: 'git+https://github.com/psq/UglifyJS.git#master' }
+77 silly lockFile 35954afa-thub-com-psq-UglifyJS-git-master git+https://github.com/psq/UglifyJS.git#master
+78 verbose lock git+https://github.com/psq/UglifyJS.git#master C:\Users\Guilherme\AppData\Roaming\npm-cache\35954afa-thub-com-psq-UglifyJS-git-master.lock
+79 silly addNameRange { name: 'optimist', range: '>=0.3.4-0 <0.4.0-0', hasData: false }
+80 verbose url raw optimist
+81 verbose url resolving [ 'https://registry.npmjs.org/', './optimist' ]
+82 verbose url resolved https://registry.npmjs.org/optimist
+83 info trying registry request attempt 1 at 19:17:51
+84 verbose etag "AN6XJ22J1C54SMY4QCGNEF66Z"
+85 http GET https://registry.npmjs.org/optimist
+86 http 304 https://registry.npmjs.org/optimist
+87 silly registry.get cb [ 304,
+87 silly registry.get   { date: 'Sat, 25 Jan 2014 21:17:53 GMT',
+87 silly registry.get     server: 'Apache',
+87 silly registry.get     connection: 'Keep-Alive',
+87 silly registry.get     'keep-alive': 'timeout=10, max=50',
+87 silly registry.get     etag: '"AN6XJ22J1C54SMY4QCGNEF66Z"',
+87 silly registry.get     vary: 'Accept' } ]
+88 verbose etag optimist from cache
+89 silly addNameRange number 2 { name: 'optimist', range: '>=0.3.4-0 <0.4.0-0', hasData: true }
+90 silly addNameRange versions [ 'optimist',
+90 silly addNameRange   [ '0.0.1',
+90 silly addNameRange     '0.0.2',
+90 silly addNameRange     '0.0.4',
+90 silly addNameRange     '0.0.5',
+90 silly addNameRange     '0.0.6',
+90 silly addNameRange     '0.0.7',
+90 silly addNameRange     '0.1.0',
+90 silly addNameRange     '0.1.1',
+90 silly addNameRange     '0.1.2',
+90 silly addNameRange     '0.1.3',
+90 silly addNameRange     '0.1.4',
+90 silly addNameRange     '0.1.5',
+90 silly addNameRange     '0.1.6',
+90 silly addNameRange     '0.1.7',
+90 silly addNameRange     '0.1.8',
+90 silly addNameRange     '0.1.9',
+90 silly addNameRange     '0.0.3',
+90 silly addNameRange     '0.2.0',
+90 silly addNameRange     '0.2.1',
+90 silly addNameRange     '0.2.2',
+90 silly addNameRange     '0.2.3',
+90 silly addNameRange     '0.2.4',
+90 silly addNameRange     '0.2.5',
+90 silly addNameRange     '0.2.6',
+90 silly addNameRange     '0.2.7',
+90 silly addNameRange     '0.2.8',
+90 silly addNameRange     '0.3.0',
+90 silly addNameRange     '0.3.1',
+90 silly addNameRange     '0.3.3',
+90 silly addNameRange     '0.3.4',
+90 silly addNameRange     '0.3.5',
+90 silly addNameRange     '0.3.6',
+90 silly addNameRange     '0.3.7',
+90 silly addNameRange     '0.4.0',
+90 silly addNameRange     '0.5.0',
+90 silly addNameRange     '0.5.1',
+90 silly addNameRange     '0.5.2',
+90 silly addNameRange     '0.6.0' ] ]
+91 verbose addNamed [ 'optimist', '0.3.7' ]
+92 verbose addNamed [ '0.3.7', '0.3.7' ]
+93 silly lockFile 090e1d8d-optimist-0-3-7 optimist@0.3.7
+94 verbose lock optimist@0.3.7 C:\Users\Guilherme\AppData\Roaming\npm-cache\090e1d8d-optimist-0-3-7.lock
+95 silly lockFile 090e1d8d-optimist-0-3-7 optimist@0.3.7
+96 silly lockFile 090e1d8d-optimist-0-3-7 optimist@0.3.7
+97 silly lockFile 094c60bd-optimist-0-3-4 optimist@~0.3.4
+98 silly lockFile 094c60bd-optimist-0-3-4 optimist@~0.3.4
+99 verbose addRemoteGit [ 'https://github.com/psq/UglifyJS.git', 'master' ]
+100 warn `git config --get remote.origin.url` returned wrong result (https://github.com/psq/UglifyJS.git)
+101 error git clone https://github.com/psq/UglifyJS.git
+102 silly lockFile 28b85054-ttps-github-com-psq-UglifyJS-git https://github.com/psq/UglifyJS.git
+103 verbose about to build C:\Users\Guilherme\AppData\Roaming\npm\node_modules\jsdox
+104 info C:\Users\Guilherme\AppData\Roaming\npm\node_modules\jsdox unbuild
+105 info preuninstall jsdox@0.2.2
+106 info uninstall jsdox@0.2.2
+107 verbose true,C:\Users\Guilherme\AppData\Roaming\npm\node_modules,C:\Users\Guilherme\AppData\Roaming\npm\node_modules unbuild jsdox@0.2.2
+108 verbose C:\Users\Guilherme\AppData\Roaming\npm,[object Object] binRoot
+109 info postuninstall jsdox@0.2.2
+110 error Error: spawn ENOENT
+110 error     at errnoException (child_process.js:980:11)
+110 error     at Process.ChildProcess._handle.onexit (child_process.js:771:34)
+111 error If you need help, you may report this *entire* log,
+111 error including the npm and node versions, at:
+111 error     <http://github.com/isaacs/npm/issues>
+112 error System Windows_NT 6.1.7601
+113 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "jsdox"
+114 error cwd C:\Users\Guilherme\Documents\GitHub\greet.js
+115 error node -v v0.10.24
+116 error npm -v 1.3.21
+117 error syscall spawn
+118 error code ENOENT
+119 error errno ENOENT
+120 verbose exit [ 1, true ]

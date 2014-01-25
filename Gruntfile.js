@@ -61,11 +61,33 @@ module.exports = function (grunt) {
         },
         src: ['src/**/*.js']
       },
+      demo: {
+        options: {
+          jshintrc: 'src/.jshintrc'
+        },
+        src: ['demo/js/**/*.js']
+      },
       test: {
         options: {
           jshintrc: 'test/.jshintrc'
         },
-        src: ['test/**/*.js']
+        src: ['test/js/**/*.js']
+      }
+    },
+    autoprefixer: {
+      demo: {
+        src: 'demo/css/demo.css',
+        dest: 'demo/css/demo.css'
+      }
+    },
+    csscomb: {
+      demo: {
+        options: {
+          config: '.csscomb.json'
+        },
+        files: {
+          'demo/css/demo.css': ['demo/css/*.css']
+        }
       }
     },
     watch: {
@@ -76,6 +98,17 @@ module.exports = function (grunt) {
       src: {
         files: '<%= jshint.src.src %>',
         tasks: ['jshint:src', 'qunit']
+      },
+      demoCss: {
+        files: 'demo/css/*.css',
+        tasks: ['autoprefixer:demo', 'csscomb:demo'],
+        options: {
+          spawn: false
+        }
+      },
+      demoJs: {
+        files: 'demo/js/demo.js',
+        tasks: 'jshint:demo'
       },
       test: {
         files: '<%= jshint.test.src %>',
@@ -93,7 +126,7 @@ module.exports = function (grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'connect', 'clean', 'concat', 'uglify']);
+  grunt.registerTask('default', ['autoprefixer', 'csscomb', 'jshint', 'clean', 'concat', 'uglify']);
   grunt.registerTask('server', ['connect', 'watch']);
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };

@@ -4,6 +4,9 @@
   "dependencies": {},
   "devDependencies": {
     "qunit": "~1.12.0",
-    "jquery": "latest"
+    "jquery": "latest",
+    "bootstrap": "~3.0.3",
+    "bootstrap-timepicker": "~0.2.6",
+    "bootstrap-css": "2.3.2"
   }
 }

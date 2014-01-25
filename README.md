@@ -4,6 +4,11 @@
 
 Generate time-based greeting messages
 
+## Demo
+Checkout our awesome [demo][demo].
+
+[demo]: https://hi.github.com/greet.js/index.html
+
 ## Getting Started
 
 Download the [production version][min] or the [development version][max].
@@ -14,19 +19,53 @@ Download the [production version][min] or the [development version][max].
 In your web page:
 
 ```html
-<script src="jquery.js"></script>
-<script src="dist/greet.min.js"></script>
-<script>
+<h1 data-greet>John</h1>
+```
+
+Based on user time machine, the output will be:
+
+```html
+<h1>Hello John Doe, how is going your morning?</h1>
+```
+
+```html
+<h1>Good night, John.</h1>
+```
+
+### jQuery version
+
+```js
 jQuery(function($) {
-  $.awesome(); // "awesome"
+  $('[data-greet]').greet();
 });
-</script>
+```
+
+## Examples
+```js
+  {
+    time: "now",
+    messages: {
+      "12 AM": [
+        "It's bed time, {name}"
+      ],
+      "05 AM": [
+        "Good morning, {name}"
+      ],
+      "12 PM": [
+        "Good afternoon, {name}"
+      ],
+      "06 PM": [
+        "Good evening, {name}"
+      ],
+      "09 PM": [
+        "Good night, {name}",
+        "Have a great night, {name}"
+      ]
+    }
+  }
 ```
 
 ## Documentation
-_(Coming soon)_
-
-## Examples
 _(Coming soon)_
 
 ## Release History
